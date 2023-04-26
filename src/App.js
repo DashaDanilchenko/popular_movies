@@ -45,15 +45,13 @@ function App() {
     setIdMovie(`${id}`)
   }
 
-  console.log(movies)
-
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
           <Route>
             <Route
-              path="/"
+              path="/popular_movies/"
               element={
                 <Movies
                 movies={movies}
@@ -69,7 +67,7 @@ function App() {
             />
             <Route path="*" element={<NotFound />} />
             <Route
-              path="list"
+              path="/popular_movies/list"
               element={
                 <ListFavorite
                   moviesFavorite={moviesFavorite}
@@ -77,7 +75,7 @@ function App() {
                 />
               }
             />
-            <Route path="single" element={<SingleMovie idMovie={idMovie} />} />
+            <Route path="/popular_movies/single" element={<SingleMovie idMovie={idMovie} />} />
           </Route>
         </Routes>
       </div>
