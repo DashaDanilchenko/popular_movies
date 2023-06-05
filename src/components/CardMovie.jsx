@@ -33,7 +33,7 @@ const CardMovie = ({
         </button>
       </div>
       <div className={styles.info}>
-        <Link to="single"><div className={styles.name_cursor}  onClick={() => findId(id)}>{title}</div></Link>
+        <Link to="/single"><div className={styles.name_cursor}  onClick={() => findId(id)}>{title}</div></Link>
         <div className={styles.genre}>genre: {searchGenres(genre_ids)}</div> 
       </div>
     </div>

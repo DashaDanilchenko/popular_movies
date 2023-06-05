@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import { apiMovie } from './components/api'
 import Movies from './components/Movies'
@@ -46,12 +46,12 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Routes>
           <Route>
             <Route
-              path="/popular_movies/"
+              path="/"
               element={
                 <Movies
                 movies={movies}
@@ -67,7 +67,7 @@ function App() {
             />
             <Route path="*" element={<NotFound />} />
             <Route
-              path="/popular_movies/list"
+              path="/list"
               element={
                 <ListFavorite
                   moviesFavorite={moviesFavorite}
@@ -75,11 +75,11 @@ function App() {
                 />
               }
             />
-            <Route path="/popular_movies/single" element={<SingleMovie idMovie={idMovie} />} />
+            <Route path="/single" element={<SingleMovie idMovie={idMovie} />} />
           </Route>
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

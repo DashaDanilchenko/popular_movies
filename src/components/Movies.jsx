@@ -32,7 +32,7 @@ const Movies = ({ movies, moviesFavorite, addMovie, deleteMovie, findId, setMovi
 
   return (
     <div>
-      <Link to="list">
+      <Link to="/list">
         <button className={styles.list}>List favorite movie</button>
       </Link>
       <SearchMovie text={text} setText={setText} />
